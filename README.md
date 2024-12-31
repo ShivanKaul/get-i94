@@ -1,6 +1,6 @@
 # Get I-94
 
-The `run.py` script fetches your latest I-94 from the CBP website and saves it as a PDF locally in `latest_i94.pdf`. The script uses Selenium and the Brave browser (though you can easily change it to be Chrome). You can save your I-94 details locally in a file called `i94_config.json` (DO NOT UPLOAD THIS ANYWHERE). I've included `i94_config.json.sample` as a kick-off point but you'll need to obviously change and rename the file.
+The `run.py` script fetches your latest I-94 from the [CBP website](https://i94.cbp.dhs.gov/home) and saves it as a PDF locally in `latest_i94.pdf`. The script uses Selenium and the Brave browser (though you can easily change it to be Chrome). You can save your I-94 details locally in a file called `i94_config.json` (DO NOT UPLOAD THIS ANYWHERE). I've included `i94_config.json.sample` as a kick-off point but you'll need to obviously change and rename the file.
 
 ## Installation
 
@@ -8,8 +8,11 @@ The `run.py` script fetches your latest I-94 from the CBP website and saves it a
 # Virtualenv
 python3 venv venv
 source venv/bin/activate
-# Install dependencies
+# Install dependencies.
 pip install -r requirements.txt
+# Rename the config.
+mv i94_config.json.sample i94_config.json
+# Add your details in the config file.
 ```
 
 The script needs a path to a browser binary. I've hardcoded a path to a local installation of Brave, but you can easily change this.
